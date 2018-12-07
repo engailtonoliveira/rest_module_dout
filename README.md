@@ -1,6 +1,6 @@
 # Sticky Notes
 
-Sticky Notes this is a simple application web responsive where you learn how to save your data on web store and put your application offline integrate  indexedDB and service worker in your application.
+This is a simple application web responsive where you learn how to save your data on web store and put your application offline integrate  indexedDB and service worker in your application.
 
 ## Getting Started
 
