@@ -1,0 +1,121 @@
+html {
+    box-sizing: unset;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font:14px/1.5 "Helvetica Neue", Helvetica, Arial, san-serif;
+	overflow-x: hidden;
+	background-image: url("../images/background.jpg");
+}
+
+.card {
+    border-radius: 0;
+}
+
+.note-editor .note-editable {
+    line-height: 1;
+    font-size: 32px;
+}
+
+.note-editable { 
+	background-color: yellow !important;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid #000 !important;
+}
+
+#createUpdateSticke {
+	display: none;
+}
+
+.addpubbutton {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 60px;
+	height: 60px;
+	margin-right: 18px;
+	margin-bottom: 18px;
+	z-index: 10000;
+}
+
+.addSecPubButton {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 40px;
+	height: 40px;
+	margin-right: 26px;
+	margin-bottom: 86px;
+	z-index: 10000;
+}
+
+.btn-circle {
+	opacity: 0.6;
+	width: 100%;
+	height: 100%;
+	line-height: 42px;
+	padding: 0;
+	border-radius: 100px!important;
+	box-shadow: 2px 2px 5px 3px rgba(31, 24, 24, 0.7);
+	background-color: #3783c5;
+}
+
+.styleSVGFloatingButton {
+	fill: #fff;
+	position: relative;
+	width: 50%;
+	margin: 15px auto 0;
+}
+
+#saveStickyNotes > button > div.styleSVGFloatingButton {
+	margin-top: 4px;
+}
+
+#saveSticke .styleSVGFloatingButton {
+	margin: auto;
+}
+
+#saveStickyNotes .btn-circle {
+	box-shadow: 1px 1px 5px 1px rgba(31, 24, 24, 0.7);
+}
+
+.contentSummernote {
+	margin: 14px 14px 0 10px;
+	overflow: visible;
+	-webkit-box-shadow: 2px 2px 5px 3px rgba(31, 24, 24, 0.6);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+	-moz-box-shadow:    2px 2px 5px 3px rgba(31, 24, 24, 0.6);  /* Firefox 3.5 - 3.6 */
+	box-shadow:         2px 2px 5px 3px rgba(31, 24, 24, 0.6);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+	position: relative;
+}
+
+.remove-sticke {
+		opacity: 0.6;
+    position: absolute;
+    border-radius: 50%;
+    background: #4c5b5c;
+    color: #fff;
+    top: -10px;
+    right: -10px;
+    z-index: 10;
+}
+
+button:focus {
+	-moz-outline-radius: unset !important;
+    outline: unset !important;
+}
+
+#bodyStickyNotes {
+	position: relative;
+}
+
+#stickyNotes{
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow-y: hide;
+	overflow-x: auto;
+}

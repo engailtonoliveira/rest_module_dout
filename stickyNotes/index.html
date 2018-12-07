@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible"content="IE=edge">
+	<meta name='description' content='Stick Note. Probably the best note web app there is.'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Summernote</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet">
+  	<link href="css/sweetalert.css" rel="stylesheet">
+  	<link href="css/jquery.toast.min.css" rel="stylesheet">
+    <link href="dist/summernote-bs4.css" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+	<section id="bodylistStickyNotes">
+		<section id="stickyNotes">
+			<div id="listStickyNotes">
+			</div>
+			<div class="floatBtn">
+				<div class='addpubbutton' id="createStickyNotes">
+					<button type='button' class='btn btn-circle floatingButton'>
+						<div class='styleSVGFloatingButton'>
+						  	<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" style="" xml:space="preserve">
+								<path d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z"/>
+							</svg>
+						</div>
+					</button>
+				</div>
+			</div>
+		</section>
+		<section id="createUpdatelistStickyNotes" style="display: none">
+			<div id="summernote"></div>
+			<div class="floatBtn">
+				<div class='addSecPubButton' id="saveStickyNotes">
+					<button type='button' class='btn btn-circle floatingButton'>
+						<div class='styleSVGFloatingButton'>
+						  	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 215 215" style="" xml:space="preserve">
+								<path style="fill:#030104;" d="M186,21.718V0H28v16H0v199h215V50.414L186,21.718z M169,56h-9V17h9V56z M45,17h76v39H45V17z M175,192H39v-91h136V192z"/>
+								<rect style="fill:#030104;" x="58" y="122" width="74" height="18"/>
+								<rect style="fill:#030104;" x="58" y="153" width="97" height="18"/>
+							</svg>
+						</div>
+					</button>
+				</div>
+				<div class='addpubbutton' id="backHome">
+					<button type='button' class='btn btn-circle floatingButton'>
+						<div class='styleSVGFloatingButton'>
+						  	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.02 27.02" style="" xml:space="preserve"><path style="fill:#030104;" d="M3.674,24.876c0,0-0.024,0.604,0.566,0.604c0.734,0,6.811-0.008,6.811-0.008l0.01-5.581 c0,0-0.096-0.92,0.797-0.92h2.826c1.056,0,0.991,0.92,0.991,0.92l-0.012,5.563c0,0,5.762,0,6.667,0c0.749,0,0.715-0.752,0.715-0.752V14.413l-9.396-8.358l-9.975,8.358C3.674,14.413,3.674,24.876,3.674,24.876z"/><path style="fill:#030104;" d="M0,13.635c0,0,0.847,1.561,2.694,0l11.038-9.338l10.349,9.28c2.138,1.542,2.939,0,2.939,0L13.732,1.54L0,13.635z"/><polygon style="fill:#030104;" points="23.83,4.275 21.168,4.275 21.179,7.503 23.83,9.752"/></svg>
+						</div>
+					</button>
+				</div>
+			</div>
+		</section>
+	</section>
+
+	
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/jquery.toast.min.js"></script>
+	<script src="dist/summernote-bs4.js"></script>
+	<script src="js/indexedDB.js"></script>
+	<script>
+		$(document).ready(function() {
+			//displayPubList();
+		});
+		 		
+		var w = window.innerWidth;
+    	var h = window.innerHeight;
+    	setDimenssionContent(h, w);
+
+	    $(window).resize(function() {
+			let w = window.innerWidth;
+			let h = window.innerHeight;
+	    	setDimenssionContent (h, w);
+	    });
+
+	    function setDimenssionContent (height, width) {
+	    	$('#bodylistStickyNotes').height(height);
+	    	$('#stickyNotes').width($('#bodylistStickyNotes').width());
+    		$('#stickyNotes').height($('#bodylistStickyNotes').height());
+	    }
+
+		function init_summernote(element) {
+			$(element).summernote({
+				height: 80,   
+		        toolbar: false,
+		        disableResizeEditor: true,
+		    });
+		}
+
+
+		function init_toast(content) {
+			$.toast({
+			    text: content, 
+			    heading: false,
+			    showHideTransition: 'fade', 
+			    allowToastClose: false, 
+			    hideAfter: 3000, 
+			    stack: 5, 
+			    position: 'bottom-left',
+			    textAlign: 'left',  
+			    loader: false, 
+			    //loaderBg: '#9EC600',  // Background color of the toast loader
+			    beforeShow: function () {}, // will be triggered before the toast is shown
+			    afterShown: function () {
+			    	$("#savelistStickyNotes ").hide();
+			    }, // will be triggered after the toat has been shown
+			    beforeHide: function () {}, // will be triggered before the toast gets hidden
+			    afterHidden: function () {
+			    }
+			});
+		}
+	</script>
+
+
+</body>
+</html>
