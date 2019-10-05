@@ -13,20 +13,14 @@ This application was deployet for engailtonoliveira
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/engailtonoliveira/stickNodes/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/engailtonoliveira/stickNotes/tags). 
 
 ## Authors
 
-* **Ailton Oliveira** - ** - (https://github.com/engailtonoliveira/feedback.git)
+* **Ailton Oliveira** - ** - (https://github.com/engailtonoliveira/stickyNotes.git)
 
 See also the list of project(https://github.com/engailtonoliveira/)
 
 ## License
 
 This project is licensed under the MIT License - see the (LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc# feedback
