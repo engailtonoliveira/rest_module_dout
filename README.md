@@ -7,14 +7,6 @@ This is a simple application web responsive where you learn how to save your dat
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 ## Deployment
 
 This application was deployet for engailtonoliveira
