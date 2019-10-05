@@ -1,6 +1,6 @@
 {
-  "name": "Stick Note",
-  "short_name": "Note",
+  "name": "engailtonoliveira/stickynodes",
+  "short_name": "Sticky Nodes",
   "icons": [
     {
       "src": "/images/svg/home-page.svg",
