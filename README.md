@@ -2,6 +2,8 @@
 
 This is a simple application web responsive where you learn how to save your data on web store and put your application offline integrate  indexedDB and service worker in your application.
 
+![Sticky Notes](https://repository-images.githubusercontent.com/138948354/c785e280-e6ff-11e9-8d55-87e8c62d49e8)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
